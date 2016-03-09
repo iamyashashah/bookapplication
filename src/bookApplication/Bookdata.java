@@ -7,6 +7,9 @@ public class Bookdata {
 	private String title;
 	private String description;
 	private boolean instock;
+	private double quantity;
+	private double totalprice;
+
 
 
 	public Bookdata() {
@@ -21,6 +24,8 @@ public class Bookdata {
 		title = book_title;
 		description = book_description;
 		instock = book_instock;
+		double pricecal = 0;
+		totalprice = pricecal;
 
 	}
 	public void setAuthor(String name)
@@ -86,6 +91,17 @@ public class Bookdata {
 	{
 		return instock;
 	}
-
+	
+	public double getpricecal(double quantity)
+	
+	{
+		double pricecal = 0;
+		
+		if (instock == true)
+		{
+			pricecal = price * quantity ;
+		}
+		return pricecal;
+	}
 
 }
